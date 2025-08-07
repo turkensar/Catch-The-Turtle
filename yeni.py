@@ -21,7 +21,7 @@ def setup_score_turtle():
     score_turtle.setpos(0, 350)
     score_turtle.write("Score: {}".format(score), move=False, align="center", font=("Arial", 30, "normal"))
 
-# Turtle oluşturma fonksiyonu
+
 def make_turtle(x, y):
     t = turtle.Turtle()
     t.penup()
@@ -71,7 +71,7 @@ def setup_fake_turtles():
 x_coordinates = [-20, -10, 0, 10, 20]
 y_coordinates = [20, 10, 0, -10]
 
-# Tüm turtle'ları oluştur
+
 def setup_turtles():
     for x in x_coordinates:
         for y in y_coordinates:
@@ -92,13 +92,13 @@ def make_fake_turtles():
 def show_turtles_randomly():
     if not game_over:
         hide_turtles()
-        hide_fake_turtles() # sahte turtle'ları da gizle
+        hide_fake_turtles() 
 
-        # Gerçek turtle'lardan birini göster
+        
         random.choice(turtle_list).showturtle()
 
         if random.random() < 0.8 and fake_turtle_list:
-            fake_count = random.randint(2, 4)  # 2 ile 4 arasında sahte turtle göster
+            fake_count = random.randint(2, 4)  
             fake_samples = random.sample(fake_turtle_list, k=min(fake_count, len(fake_turtle_list)))
             for fake in fake_samples:
                 fake.showturtle()
